@@ -26,26 +26,27 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-17FIPGFE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT2Gj5Hr9+0Om15a4qJEfPQAAAAACAAAAAAAQZgAAAAEAACAAAAAr3ctEGuetZ4KY61JkxC2cU3u/KFieZit4OIv671CrTQAAAAAOgAAAAAIAACAAAABPCi5KYD8Si6lO2r5aD5CO5cSCFhFDAVGxzje29RLo45AAAAAuZwHEaDclsOuPxY4nY7ULlcLRLY6z0aALMA3YTfrpjQwOynRqEUDo5Nr0d3PvoPjpg6wUAAVN/horfODjD0v3kdGCuSFHAizl2iHa3idJN6C+0EccUpD/z+c4jZ7whP5p2uBwiolKN3OkUfsLfYO/SnaP1+2jgQRnVhVrl1noqfL82xEDRL+Aohsse0HALvFAAAAADAbgSN6k/9lElo3h1my/VhdgbdoYKrYYEZWvxuUXbDQwhw4K9gkS4LJPg6irQM9H1lnFZuiJMajodEMn6Lde4A==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT2Gj5Hr9+0Om15a4qJEfPQAAAAACAAAAAAAQZgAAAAEAACAAAABhmG/wwGyp51zZ2r7M+zrYiO/h0ztNzX3fwNIoUJfD9QAAAAAOgAAAAAIAACAAAAD/jzmEIMshpiPfi4ulv/GXAdpZAh8tJSVc2jfVywnQq5AAAAAdZjvKddb0iZnbvDTHj7+oMvZf1sKrBIjB12k5fIFzXt2QuR6gMIdNp9PKNNhbOiI6docSqpWiloTJrEQTM4MmZNFNX04n8ASgPbEtaWMJPgk3ZnAcleMgyuQq9tAAkU6lqGtzxnTquHUdQDrcdxea9GAh5OswX2EbQ3l2OCPKJgvDSGRiWcLnnUu1UIBgjdxAAAAARGP/j83ePlMZeFPlWVVR+uQj7goALxRFmB1uPWT1EixOYqapALlb+KHHM1x2ioaLvJeThPYT2wDtyRgnxReFIw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="IngestionPackage.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Package2.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="IngestionPackage.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{CB17FFFB-DCB3-4065-822A-E5B05C310FB0}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{191043C7-D76F-4BEC-B328-825B243FC62D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">IngestionPackage</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">27</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">64</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{43E88B84-E76A-450D-B823-20F877BCFAF8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6211CA98-1C53-4CC3-A55E-6F9DAAB0D19C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -349,6 +350,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Package2.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{0855D484-D7BF-410C-8DF3-F61EB7B8A7A8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2A7BF03C-A500-4692-BCC7-AD63D69BE964}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
