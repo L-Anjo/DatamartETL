@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-17FIPGFE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT2Gj5Hr9+0Om15a4qJEfPQAAAAACAAAAAAAQZgAAAAEAACAAAAD2ZMt/T/bdUnE8Q2gETdnk2CqymmSfz+JqhFUyFscS0gAAAAAOgAAAAAIAACAAAADujPi4xYS3ylG8n34VHMEVev9tlMQtPl7KMyjM1BxNCJAAAAA2BYNA4M4uCTzgorduTOhUmhHlIlRS5j1NWfxDTjUIHbBCGS1KKycB+okk2noHvKCRJhXPlPxiS38l7fm+GcDuw0dtKBQCU/9Y4RuzadwceGS51Vy4gLCO6prD9X723jJNa4ZUSxgbgKl4gHwjDmcEno/mljQaZCuUgqt+x/4vlSmBPM7G5wQV3UirdY5nVX5AAAAA7Vq3XJ7zq2lidfG7Pfa0Z/n2U90q8Nz6sJJDpg6nSH8yiUNWNy0mCFFe4OX0TPGgQxjd05ApYlFBvvHsoUjzHA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT2Gj5Hr9+0Om15a4qJEfPQAAAAACAAAAAAAQZgAAAAEAACAAAAAr3ctEGuetZ4KY61JkxC2cU3u/KFieZit4OIv671CrTQAAAAAOgAAAAAIAACAAAABPCi5KYD8Si6lO2r5aD5CO5cSCFhFDAVGxzje29RLo45AAAAAuZwHEaDclsOuPxY4nY7ULlcLRLY6z0aALMA3YTfrpjQwOynRqEUDo5Nr0d3PvoPjpg6wUAAVN/horfODjD0v3kdGCuSFHAizl2iHa3idJN6C+0EccUpD/z+c4jZ7whP5p2uBwiolKN3OkUfsLfYO/SnaP1+2jgQRnVhVrl1noqfL82xEDRL+Aohsse0HALvFAAAAADAbgSN6k/9lElo3h1my/VhdgbdoYKrYYEZWvxuUXbDQwhw4K9gkS4LJPg6irQM9H1lnFZuiJMajodEMn6Lde4A==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">19</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">27</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{D8A21910-9E1E-45CA-A2B6-93E1CF930394}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{43E88B84-E76A-450D-B823-20F877BCFAF8}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -78,7 +78,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=Transfermarkt;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{9EC3925C-BC2F-489B-B55E-EE6CCA0C9346}LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=Transfermarkt;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{9EC3925C-BC2F-489B-B55E-EE6CCA0C9346}LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -226,7 +226,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=TransfermarktDSA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{2DE84EE3-8543-4E3E-8719-413B0F23F7C4}LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=TransfermarktDSA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{2DE84EE3-8543-4E3E-8719-413B0F23F7C4}LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

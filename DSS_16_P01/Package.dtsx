@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{58891BA9-63D3-4988-88F3-EC1AAA83F948}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{0F7CA681-E381-4C24-B672-63808705BF7A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=Transfermarkt;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{9EC3925C-BC2F-489B-B55E-EE6CCA0C9346}LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=Transfermarkt;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{9EC3925C-BC2F-489B-B55E-EE6CCA0C9346}LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=TransfermarktDSA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{2DE84EE3-8543-4E3E-8719-413B0F23F7C4}LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=LAPTOP-17FIPGFE\MSSQLSERVER01;Initial Catalog=TransfermarktDSA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{2DE84EE3-8543-4E3E-8719-413B0F23F7C4}LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -514,12 +514,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ArbitrosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\ArbitrosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\ArbitrosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
-                    <inputColumn
                       refId="Package\ArbitrosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nome]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -773,7 +767,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -795,12 +789,6 @@
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
                     <inputColumn
                       refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nome]"
                       cachedCodepage="1252"
@@ -1139,7 +1127,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1528,12 +1516,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
-                    <inputColumn
                       refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaID]"
                       cachedDataType="i4"
                       cachedName="EquipaID"
@@ -1551,12 +1533,6 @@
                       cachedName="Minuto"
                       externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minuto]"
                       lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minuto]" />
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TipoEventoID]"
-                      cachedDataType="i4"
-                      cachedName="TipoEventoID"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoEventoID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoEventoID]" />
                     <inputColumn
                       refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogadorID]"
                       cachedDataType="i4"
@@ -1602,10 +1578,6 @@
                       refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minuto]"
                       dataType="i4"
                       name="Minuto" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoEventoID]"
-                      dataType="i4"
-                      name="TipoEventoID" />
                     <externalMetadataColumn
                       refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorID]"
                       dataType="i4"
@@ -2751,7 +2723,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -3257,7 +3229,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -3812,12 +3784,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\PaisesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\PaisesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\PaisesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
-                    <inputColumn
                       refId="Package\PaisesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Descr]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -4093,12 +4059,6 @@
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\PosicoesJogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\PosicoesJogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\PosicoesJogadoresDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
                     <inputColumn
                       refId="Package\PosicoesJogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Descr]"
                       cachedCodepage="1252"
@@ -4376,12 +4336,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TreinadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\TreinadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\TreinadoresDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
-                    <inputColumn
                       refId="Package\TreinadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nome]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -4572,6 +4526,96 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição]"
+      DTS:CreationName=""
+      DTS:DTSID="{454D4BAB-950A-4107-84D6-E1A53A51B0BC}"
+      DTS:From="Package\PaisesDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição"
+      DTS:To="Package\PosicoesJogadoresDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B96878C8-8E90-4031-AA92-5EB2C0E00C10}"
+      DTS:From="Package\PosicoesJogadoresDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 1"
+      DTS:To="Package\TreinadoresDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{8539B139-9C8E-4D97-BC5E-E0B101D91F38}"
+      DTS:From="Package\JogosDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 10"
+      DTS:To="Package\AlinhamentosDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{F4517219-F809-4470-A7B8-80D59B81CFF0}"
+      DTS:From="Package\TreinadoresDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 2"
+      DTS:To="Package\ArbitrosDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{C24AC3B2-7DC7-4675-8186-CEF2E242077B}"
+      DTS:From="Package\ArbitrosDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 3"
+      DTS:To="Package\CompeticoesDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{003B1CD0-D3A6-4300-8ED3-CE71345A6EC8}"
+      DTS:From="Package\CompeticoesDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 4"
+      DTS:To="Package\EquipasDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{090917F8-7A03-45B9-9CEC-EB90BC758EE6}"
+      DTS:From="Package\EquipasDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 5"
+      DTS:To="Package\JogadoresDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{7AE7BB86-BE58-4D43-BAB1-C44962368D8E}"
+      DTS:From="Package\JogadoresDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 6"
+      DTS:To="Package\JogadoresAvaliacaoDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{9398BBC6-58B5-4CE2-92FB-94D9954A1E9A}"
+      DTS:From="Package\JogadoresAvaliacaoDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 7"
+      DTS:To="Package\JogosDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{28ACCC71-31B8-4A4B-8292-181E574ACE1A}"
+      DTS:From="Package\AlinhamentosDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 8"
+      DTS:To="Package\FichasJogoDSA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{16ABC0CD-DA43-4D23-A00B-FB95F95AB63E}"
+      DTS:From="Package\FichasJogoDSA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 9"
+      DTS:To="Package\EventosJogoDSA" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
 <!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
@@ -4583,55 +4627,381 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="166.666666666667,42.6666666666667"
           Id="Package\AlinhamentosDSA"
-          TopLeft="659.999970495702,346.219302005618" />
+          TopLeft="566.138367548786,270.46742313811" />
         <NodeLayout
           Size="138,42.6666666666667"
           Id="Package\ArbitrosDSA"
-          TopLeft="93.3333291610083,284.675444159494" />
+          TopLeft="458.735098540562,88.8201831520514" />
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\CompeticoesDSA"
-          TopLeft="659.999970495702,140.885968672285" />
+          TopLeft="238.571417906455,91.525066958619" />
         <NodeLayout
           Size="140,42.6666666666667"
           Id="Package\EquipasDSA"
-          TopLeft="659.999970495702,38.2193020056186" />
+          TopLeft="163.683028397084,162.354638988502" />
         <NodeLayout
           Size="162.666666666667,42.6666666666667"
           Id="Package\EventosJogoDSA"
-          TopLeft="659.999970495702,243.552635338951" />
+          TopLeft="664.575863148286,101.82331358684" />
         <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\FichasJogoDSA"
-          TopLeft="403.749981950969,158.368421751294" />
+          TopLeft="598.950866081952,189.035714647656" />
         <NodeLayout
           Size="197.333333333334,42.6666666666667"
           Id="Package\JogadoresAvaliacaoDSA"
-          TopLeft="71.458330138897,198.695907815883" />
+          TopLeft="235.520822804732,259.419591359675" />
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\JogadoresDSA"
-          TopLeft="125.624994384125,61.1403503888807" />
+          TopLeft="366.24998362735,171.469296545912" />
         <NodeLayout
           Size="130.666666666667,42.6666666666667"
           Id="Package\JogosDSA"
-          TopLeft="306.041652985537,244.789480197544" />
+          TopLeft="425.572897642074,323.320183651632" />
         <NodeLayout
           Size="133.333333333334,42.6666666666667"
           Id="Package\PaisesDSA"
-          TopLeft="208.958323992168,132.070174171489" />
+          TopLeft="59.1815449734261,23.8182956608252" />
         <NodeLayout
           Size="194.666666666667,42.6666666666667"
           Id="Package\PosicoesJogadoresDSA"
-          TopLeft="403.749981950969,55.7017550846271" />
+          TopLeft="236.562489424832,16.4473695141209" />
         <NodeLayout
           Size="158.666666666667,42.6666666666667"
           Id="Package\TreinadoresDSA"
-          TopLeft="304.999986365437,337.192989082162" />
+          TopLeft="469.843728996347,22.4561504326472" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição]"
+          TopLeft="192.514878306759,41.4661659208064">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44.0476111180728,0"
+              Start="0,0"
+              End="36.5476111180728,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.5476111180728,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 1]"
+          TopLeft="431.229156091499,40.7850933067174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.6145729048481,0"
+              Start="0,0"
+              End="31.1145729048481,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="31.1145729048481,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 2]"
+          TopLeft="549.177062329681,65.1228170993138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.441963789119,23.6973660527376"
+              Start="0,0"
+              End="-21.441963789119,16.1973660527376">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.84868302636878" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.84868302636878"
+                    Point2="0,11.8486830263688"
+                    Point3="-4,11.8486830263688" />
+                  <mssgle:LineSegment
+                    End="-17.441963789119,11.8486830263688" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.441963789119,11.8486830263688"
+                    Point2="-21.441963789119,11.8486830263688"
+                    Point3="-21.441963789119,15.8486830263688" />
+                  <mssgle:LineSegment
+                    End="-21.441963789119,16.1973660527376" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 3]"
+          TopLeft="458.735098540562,111.505958388669">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-56.1636806341065,0"
+              Start="0,0"
+              End="-48.6636806341065,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-48.6636806341065,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 4]"
+          TopLeft="320.571417906455,134.191733625286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-86.8883895093709,28.1629053632164"
+              Start="0,0"
+              End="-86.8883895093709,20.6629053632164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.0814526816082" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.0814526816082"
+                    Point2="0,14.0814526816082"
+                    Point3="-4,14.0814526816082" />
+                  <mssgle:LineSegment
+                    End="-82.8883895093709,14.0814526816082" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-82.8883895093709,14.0814526816082"
+                    Point2="-86.8883895093709,14.0814526816082"
+                    Point3="-86.8883895093709,18.0814526816082" />
+                  <mssgle:LineSegment
+                    End="-86.8883895093709,20.6629053632164" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 5]"
+          TopLeft="303.683028397085,183.687972321835">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5669552302654,9.11465755740974"
+              Start="0,0"
+              End="55.0669552302654,9.11465755740974">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.2834776151327,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.2834776151327,0"
+                    Point2="31.2834776151327,0"
+                    Point3="31.2834776151327,4" />
+                  <mssgle:LineSegment
+                    End="31.2834776151327,5.11465755740974" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.2834776151327,5.11465755740974"
+                    Point2="31.2834776151327,9.11465755740974"
+                    Point3="35.2834776151327,9.11465755740974" />
+                  <mssgle:LineSegment
+                    End="55.0669552302654,9.11465755740974" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 6]"
+          TopLeft="442.24998362735,214.135963212578">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-108.062494155951,45.283628147097"
+              Start="0,0"
+              End="-108.062494155951,37.783628147097">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6418140735485" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6418140735485"
+                    Point2="0,22.6418140735485"
+                    Point3="-4,22.6418140735485" />
+                  <mssgle:LineSegment
+                    End="-104.062494155951,22.6418140735485" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-104.062494155951,22.6418140735485"
+                    Point2="-108.062494155951,22.6418140735485"
+                    Point3="-108.062494155951,26.6418140735485" />
+                  <mssgle:LineSegment
+                    End="-108.062494155951,37.783628147097" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 8]"
+          TopLeft="649.471700882119,270.46742313811">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.4791651998329,-38.7650418237874"
+              Start="0,0"
+              End="27.4791651998329,-31.2650418237874">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.3825209118937" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.3825209118937"
+                    Point2="0,-19.3825209118937"
+                    Point3="4,-19.3825209118937" />
+                  <mssgle:LineSegment
+                    End="23.4791651998329,-19.3825209118937" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.4791651998329,-19.3825209118937"
+                    Point2="27.4791651998329,-19.3825209118937"
+                    Point3="27.4791651998329,-23.3825209118937" />
+                  <mssgle:LineSegment
+                    End="27.4791651998329,-31.2650418237874" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 9]"
+          TopLeft="676.950866081952,189.035714647656">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.9583303996675,-44.5457343941494"
+              Start="0,0"
+              End="68.9583303996675,-37.0457343941494">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.2728671970747" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.2728671970747"
+                    Point2="0,-22.2728671970747"
+                    Point3="4,-22.2728671970747" />
+                  <mssgle:LineSegment
+                    End="64.9583303996675,-22.2728671970747" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64.9583303996675,-22.2728671970747"
+                    Point2="68.9583303996675,-22.2728671970747"
+                    Point3="68.9583303996675,-26.2728671970747" />
+                  <mssgle:LineSegment
+                    End="68.9583303996675,-37.0457343941494" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 7]"
+          TopLeft="432.854156138066,280.752924693009">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.6076303928971,42.5672589586236"
+              Start="0,0"
+              End="37.6076303928971,35.0672589586236">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.6076303928971,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.6076303928971,0"
+                    Point2="37.6076303928971,0"
+                    Point3="37.6076303928971,4" />
+                  <mssgle:LineSegment
+                    End="37.6076303928971,35.0672589586236" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 10]"
+          TopLeft="511.350675419852,323.320183651632">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.7876921289342,-31.519427180189"
+              Start="0,0"
+              End="47.2876921289342,-31.519427180189">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-27.519427180189" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-27.519427180189"
+                    Point2="0,-31.519427180189"
+                    Point3="4,-31.519427180189" />
+                  <mssgle:LineSegment
+                    End="47.2876921289342,-31.519427180189" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4639,7 +5009,7 @@
     design-time-name="Package\AlinhamentosDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\AlinhamentosDSA\OLE DB Source"
@@ -4667,7 +5037,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4703,15 +5075,15 @@
     design-time-name="Package\ArbitrosDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\ArbitrosDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\ArbitrosDSA\OLE DB Destination"
           TopLeft="180.99999460578,133.999996006489" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\ArbitrosDSA\OLE DB Source"
+          TopLeft="140.624993713573,8.89473674444281" />
         <EdgeLayout
           Id="Package\ArbitrosDSA.Paths[OLE DB Source Output]"
           TopLeft="217.958327046906,51.5614034111095">
@@ -4743,7 +5115,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4781,27 +5155,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\CompeticoesDSA\OLE DB Destination"
-          TopLeft="123.124994495884,110.15789352733" />
-        <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\CompeticoesDSA\OLE DB Source"
           TopLeft="140.624993713573,8.89473674444281" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\CompeticoesDSA\OLE DB Destination"
+          TopLeft="123.124994495884,110.15789352733" />
         <EdgeLayout
           Id="Package\CompeticoesDSA.Paths[OLE DB Source Output]"
           TopLeft="214.208327438062,51.5614034111095">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.5964901162207"
+              EndConnector="0,58.5964901162205"
               Start="0,0"
-              End="0,51.0964901162207">
+              End="0,51.0964901162205">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.0964901162207" />
+                    End="0,51.0964901162205" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4909,13 +5283,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\EventosJogoDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
-        <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\EventosJogoDSA\OLE DB Destination"
           TopLeft="123.124994495884,110.15789352733" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\EventosJogoDSA\OLE DB Source"
+          TopLeft="140.624993713573,8.89473674444281" />
         <EdgeLayout
           Id="Package\EventosJogoDSA.Paths[OLE DB Source Output]"
           TopLeft="214.208327438062,51.5614034111095">
@@ -4971,7 +5345,7 @@
     design-time-name="Package\FichasJogoDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\FichasJogoDSA\OLE DB Destination"
@@ -4999,7 +5373,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5165,13 +5541,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\JogosDSA\OLE DB Destination"
-          TopLeft="123.124994495884,110.15789352733" />
-        <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\JogosDSA\OLE DB Source"
           TopLeft="140.624993713573,8.89473674444281" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\JogosDSA\OLE DB Destination"
+          TopLeft="123.124994495884,110.15789352733" />
         <EdgeLayout
           Id="Package\JogosDSA.Paths[OLE DB Source Output]"
           TopLeft="214.208327438062,51.5614034111095">
@@ -5227,15 +5603,15 @@
     design-time-name="Package\PaisesDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\PaisesDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\PaisesDSA\OLE DB Destination"
           TopLeft="123.124994495884,110.15789352733" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\PaisesDSA\OLE DB Source"
+          TopLeft="140.624993713573,8.89473674444281" />
         <EdgeLayout
           Id="Package\PaisesDSA.Paths[OLE DB Source Output]"
           TopLeft="214.208327438062,51.5614034111095">
@@ -5255,7 +5631,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5291,15 +5669,15 @@
     design-time-name="Package\PosicoesJogadoresDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\PosicoesJogadoresDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\PosicoesJogadoresDSA\OLE DB Destination"
           TopLeft="123.124994495884,110.15789352733" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\PosicoesJogadoresDSA\OLE DB Source"
+          TopLeft="140.624993713573,8.89473674444281" />
         <EdgeLayout
           Id="Package\PosicoesJogadoresDSA.Paths[OLE DB Source Output]"
           TopLeft="214.208327438062,51.5614034111095">
@@ -5319,7 +5697,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5355,15 +5735,15 @@
     design-time-name="Package\TreinadoresDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\TreinadoresDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\TreinadoresDSA\OLE DB Destination"
           TopLeft="123.124994495884,110.15789352733" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\TreinadoresDSA\OLE DB Source"
+          TopLeft="140.624993713573,8.89473674444281" />
         <EdgeLayout
           Id="Package\TreinadoresDSA.Paths[OLE DB Source Output]"
           TopLeft="214.208327438062,51.5614034111095">
@@ -5383,7 +5763,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
