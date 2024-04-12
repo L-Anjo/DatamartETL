@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="IngestionPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{6211CA98-1C53-4CC3-A55E-6F9DAAB0D19C}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{ACD7675B-918E-47E5-B23C-B19229A4C570}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -43,390 +43,6 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\AlinhamentosDSA"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{30070180-aec0-43d4-bd8f-fffb6a11f8dd}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="AlinhamentosDSA"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\AlinhamentosDSA\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Alinhamentos]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\AlinhamentosDSA\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaID]"
-                      cachedDataType="i4"
-                      cachedName="EquipaID"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]" />
-                    <inputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogoID]"
-                      cachedDataType="i4"
-                      cachedName="JogoID"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogoID]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogoID]" />
-                    <inputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogadorID]"
-                      cachedDataType="i4"
-                      cachedName="JogadorID"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorID]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorID]" />
-                    <inputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnzeInicial]"
-                      cachedDataType="bool"
-                      cachedName="OnzeInicial"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnzeInicial]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[OnzeInicial]" />
-                    <inputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Numero]"
-                      cachedDataType="i4"
-                      cachedName="Numero"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Numero]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Numero]" />
-                    <inputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Capitao]"
-                      cachedDataType="bool"
-                      cachedName="Capitao"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capitao]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Capitao]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      dataType="i4"
-                      name="EquipaID" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogoID]"
-                      dataType="i4"
-                      name="JogoID" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorID]"
-                      dataType="i4"
-                      name="JogadorID" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnzeInicial]"
-                      dataType="bool"
-                      name="OnzeInicial" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Numero]"
-                      dataType="i4"
-                      name="Numero" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capitao]"
-                      dataType="bool"
-                      name="Capitao" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AlinhamentosDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\AlinhamentosDSA\OLE DB Source"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Alinhamentos]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\AlinhamentosDSA\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EquipaID]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]"
-                      name="EquipaID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogoID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogoID]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogoID]"
-                      name="JogoID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorID]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorID]"
-                      name="JogadorID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[OnzeInicial]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OnzeInicial]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[OnzeInicial]"
-                      name="OnzeInicial"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Numero]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Numero]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Numero]"
-                      name="Numero"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Capitao]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Capitao]"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Capitao]"
-                      name="Capitao"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EquipaID]"
-                      dataType="i4"
-                      name="EquipaID" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogoID]"
-                      dataType="i4"
-                      name="JogoID" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorID]"
-                      dataType="i4"
-                      name="JogadorID" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OnzeInicial]"
-                      dataType="bool"
-                      name="OnzeInicial" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Numero]"
-                      dataType="i4"
-                      name="Numero" />
-                    <externalMetadataColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Capitao]"
-                      dataType="bool"
-                      name="Capitao" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogoID]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogoID]"
-                      name="JogoID" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorID]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorID]"
-                      name="JogadorID" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EquipaID]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EquipaID]"
-                      name="EquipaID" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OnzeInicial]"
-                      dataType="bool"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OnzeInicial]"
-                      name="OnzeInicial" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Numero]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Numero]"
-                      name="Numero" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Capitao]"
-                      dataType="bool"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Capitao]"
-                      name="Capitao" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\AlinhamentosDSA.Paths[OLE DB Source Output]"
-              endId="Package\AlinhamentosDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\AlinhamentosDSA\OLE DB Source.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\ArbitrosDSA"
       DTS:CreationName="Microsoft.Pipeline"
@@ -704,1194 +320,6 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\CompeticoesDSA"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{3886813b-bf32-411a-a79c-33687a8553e2}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="CompeticoesDSA"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\CompeticoesDSA\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Competicoes]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CompeticoesDSA\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Nome"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nome]"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nome]" />
-                    <inputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaisID]"
-                      cachedDataType="i4"
-                      cachedName="PaisID"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaisID]"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaisID]" />
-                    <inputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sigla]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Sigla"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sigla]"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sigla]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Nome" />
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaisID]"
-                      dataType="i4"
-                      name="PaisID" />
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sigla]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="Sigla" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CompeticoesDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CompeticoesDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CompeticoesDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CompeticoesDSA\OLE DB Source"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Competicoes]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CompeticoesDSA\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
-                      name="ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nome]"
-                      length="50"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nome]"
-                      name="Nome"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaisID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PaisID]"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaisID]"
-                      name="PaisID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoCompID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoCompID]"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoCompID]"
-                      name="TipoCompID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sigla]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sigla]"
-                      length="10"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sigla]"
-                      name="Sigla"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Nome" />
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PaisID]"
-                      dataType="i4"
-                      name="PaisID" />
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoCompID]"
-                      dataType="i4"
-                      name="TipoCompID" />
-                    <externalMetadataColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sigla]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="Sigla" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      dataType="i4"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      name="ID" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nome]"
-                      name="Nome" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoCompID]"
-                      dataType="i4"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoCompID]"
-                      name="TipoCompID" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PaisID]"
-                      dataType="i4"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PaisID]"
-                      name="PaisID" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sigla]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sigla]"
-                      name="Sigla" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\CompeticoesDSA.Paths[OLE DB Source Output]"
-              endId="Package\CompeticoesDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\CompeticoesDSA\OLE DB Source.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\EquipasDSA"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{c887579b-5524-4cdd-b824-bcc18239a2c2}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="EquipasDSA"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\EquipasDSA\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Equipas]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\EquipasDSA\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Nome"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nome]"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nome]" />
-                    <inputColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CompeticaoIntID]"
-                      cachedDataType="i4"
-                      cachedName="CompeticaoIntID"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CompeticaoIntID]"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompeticaoIntID]" />
-                    <inputColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SaldoMercadoTransf]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="SaldoMercadoTransf"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SaldoMercadoTransf]"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[SaldoMercadoTransf]" />
-                    <inputColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Nome" />
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CompeticaoIntID]"
-                      dataType="i4"
-                      name="CompeticaoIntID" />
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SaldoMercadoTransf]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="SaldoMercadoTransf" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\EquipasDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\EquipasDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\EquipasDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\EquipasDSA\OLE DB Source"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Equipas]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\EquipasDSA\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
-                      name="ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nome]"
-                      length="50"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nome]"
-                      name="Nome"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompeticaoIntID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompeticaoIntID]"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompeticaoIntID]"
-                      name="CompeticaoIntID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EstadioID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EstadioID]"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EstadioID]"
-                      name="EstadioID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[SaldoMercadoTransf]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SaldoMercadoTransf]"
-                      length="15"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[SaldoMercadoTransf]"
-                      name="SaldoMercadoTransf"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Nome" />
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompeticaoIntID]"
-                      dataType="i4"
-                      name="CompeticaoIntID" />
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EstadioID]"
-                      dataType="i4"
-                      name="EstadioID" />
-                    <externalMetadataColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SaldoMercadoTransf]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="SaldoMercadoTransf" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      dataType="i4"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      name="ID" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nome]"
-                      name="Nome" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompeticaoIntID]"
-                      dataType="i4"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompeticaoIntID]"
-                      name="CompeticaoIntID" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EstadioID]"
-                      dataType="i4"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EstadioID]"
-                      name="EstadioID" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SaldoMercadoTransf]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SaldoMercadoTransf]"
-                      name="SaldoMercadoTransf" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\EquipasDSA.Paths[OLE DB Source Output]"
-              endId="Package\EquipasDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\EquipasDSA\OLE DB Source.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\EventosJogoDSA"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{baa91916-5b2e-4fb7-b0e7-4d587e737c11}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="EventosJogoDSA"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\EventosJogoDSA\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[EventosJogo]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\EventosJogoDSA\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.TransfermarktDSA]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaID]"
-                      cachedDataType="i4"
-                      cachedName="EquipaID"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]" />
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogoID]"
-                      cachedDataType="i4"
-                      cachedName="JogoID"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogoID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogoID]" />
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Minuto]"
-                      cachedDataType="i4"
-                      cachedName="Minuto"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minuto]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minuto]" />
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogadorID]"
-                      cachedDataType="i4"
-                      cachedName="JogadorID"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorID]" />
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ObsEvento]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="ObsEvento"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ObsEvento]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ObsEvento]" />
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogadorInID]"
-                      cachedDataType="i4"
-                      cachedName="JogadorInID"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorInID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorInID]" />
-                    <inputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogadorAssitID]"
-                      cachedDataType="i4"
-                      cachedName="JogadorAssitID"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorAssitID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorAssitID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      dataType="i4"
-                      name="EquipaID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogoID]"
-                      dataType="i4"
-                      name="JogoID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minuto]"
-                      dataType="i4"
-                      name="Minuto" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorID]"
-                      dataType="i4"
-                      name="JogadorID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ObsEvento]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="ObsEvento" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorInID]"
-                      dataType="i4"
-                      name="JogadorInID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorAssitID]"
-                      dataType="i4"
-                      name="JogadorAssitID" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\EventosJogoDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\EventosJogoDSA\OLE DB Source"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[EventosJogo]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\EventosJogoDSA\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-17FIPGFE\MSSQLSERVER01.Transfermarkt]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
-                      name="ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EquipaID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]"
-                      name="EquipaID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogoID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogoID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogoID]"
-                      name="JogoID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minuto]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Minuto]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minuto]"
-                      name="Minuto"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoEventoID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoEventoID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoEventoID]"
-                      name="TipoEventoID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorID]"
-                      name="JogadorID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ObsEvento]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ObsEvento]"
-                      length="100"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[ObsEvento]"
-                      name="ObsEvento"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorInID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorInID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorInID]"
-                      name="JogadorInID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorAssitID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorAssitID]"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[JogadorAssitID]"
-                      name="JogadorAssitID"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EquipaID]"
-                      dataType="i4"
-                      name="EquipaID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogoID]"
-                      dataType="i4"
-                      name="JogoID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Minuto]"
-                      dataType="i4"
-                      name="Minuto" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoEventoID]"
-                      dataType="i4"
-                      name="TipoEventoID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorID]"
-                      dataType="i4"
-                      name="JogadorID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ObsEvento]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="ObsEvento" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorInID]"
-                      dataType="i4"
-                      name="JogadorInID" />
-                    <externalMetadataColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JogadorAssitID]"
-                      dataType="i4"
-                      name="JogadorAssitID" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      name="ID" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogoID]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogoID]"
-                      name="JogoID" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Minuto]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Minuto]"
-                      name="Minuto" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoEventoID]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoEventoID]"
-                      name="TipoEventoID" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorID]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorID]"
-                      name="JogadorID" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EquipaID]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EquipaID]"
-                      name="EquipaID" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ObsEvento]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ObsEvento]"
-                      name="ObsEvento" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorInID]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorInID]"
-                      name="JogadorInID" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorAssitID]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JogadorAssitID]"
-                      name="JogadorAssitID" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\EventosJogoDSA.Paths[OLE DB Source Output]"
-              endId="Package\EventosJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\EventosJogoDSA\OLE DB Source.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\FichasJogoDSA"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -1978,12 +406,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\FichasJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaID]"
-                      cachedDataType="i4"
-                      cachedName="EquipaID"
-                      externalMetadataColumnId="Package\FichasJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      lineageId="Package\FichasJogoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]" />
-                    <inputColumn
                       refId="Package\FichasJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogoID]"
                       cachedDataType="i4"
                       cachedName="JogoID"
@@ -2028,10 +450,6 @@
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\FichasJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      dataType="i4"
-                      name="EquipaID" />
                     <externalMetadataColumn
                       refId="Package\FichasJogoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogoID]"
                       dataType="i4"
@@ -2418,12 +836,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\JogadoresAvaliacaoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaID]"
-                      cachedDataType="i4"
-                      cachedName="EquipaID"
-                      externalMetadataColumnId="Package\JogadoresAvaliacaoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      lineageId="Package\JogadoresAvaliacaoDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]" />
-                    <inputColumn
                       refId="Package\JogadoresAvaliacaoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JogadorID]"
                       cachedDataType="i4"
                       cachedName="JogadorID"
@@ -2444,10 +856,6 @@
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\JogadoresAvaliacaoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      dataType="i4"
-                      name="EquipaID" />
                     <externalMetadataColumn
                       refId="Package\JogadoresAvaliacaoDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JogadorID]"
                       dataType="i4"
@@ -2766,12 +1174,6 @@
                       externalMetadataColumnId="Package\JogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Epoca]"
                       lineageId="Package\JogadoresDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Epoca]" />
                     <inputColumn
-                      refId="Package\JogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaID]"
-                      cachedDataType="i4"
-                      cachedName="EquipaID"
-                      externalMetadataColumnId="Package\JogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      lineageId="Package\JogadoresDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaID]" />
-                    <inputColumn
                       refId="Package\JogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaisID]"
                       cachedDataType="i4"
                       cachedName="PaisID"
@@ -2824,10 +1226,6 @@
                       refId="Package\JogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Epoca]"
                       dataType="i4"
                       name="Epoca" />
-                    <externalMetadataColumn
-                      refId="Package\JogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaID]"
-                      dataType="i4"
-                      name="EquipaID" />
                     <externalMetadataColumn
                       refId="Package\JogadoresDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaisID]"
                       dataType="i4"
@@ -3264,29 +1662,11 @@
                       externalMetadataColumnId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Epoca]"
                       lineageId="Package\JogosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Epoca]" />
                     <inputColumn
-                      refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CompeticaoID]"
-                      cachedDataType="i4"
-                      cachedName="CompeticaoID"
-                      externalMetadataColumnId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CompeticaoID]"
-                      lineageId="Package\JogosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompeticaoID]" />
-                    <inputColumn
                       refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Data]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Data"
                       externalMetadataColumnId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
                       lineageId="Package\JogosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[Data]" />
-                    <inputColumn
-                      refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaCasaID]"
-                      cachedDataType="i4"
-                      cachedName="EquipaCasaID"
-                      externalMetadataColumnId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaCasaID]"
-                      lineageId="Package\JogosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaCasaID]" />
-                    <inputColumn
-                      refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EquipaForaID]"
-                      cachedDataType="i4"
-                      cachedName="EquipaForaID"
-                      externalMetadataColumnId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaForaID]"
-                      lineageId="Package\JogosDSA\OLE DB Source.Outputs[OLE DB Source Output].Columns[EquipaForaID]" />
                     <inputColumn
                       refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TreinadorCasaID]"
                       cachedDataType="i4"
@@ -3323,21 +1703,9 @@
                       dataType="i4"
                       name="Epoca" />
                     <externalMetadataColumn
-                      refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CompeticaoID]"
-                      dataType="i4"
-                      name="CompeticaoID" />
-                    <externalMetadataColumn
                       refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
                       dataType="dbTimeStamp"
                       name="Data" />
-                    <externalMetadataColumn
-                      refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaCasaID]"
-                      dataType="i4"
-                      name="EquipaCasaID" />
-                    <externalMetadataColumn
-                      refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EquipaForaID]"
-                      dataType="i4"
-                      name="EquipaForaID" />
                     <externalMetadataColumn
                       refId="Package\JogosDSA\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TreinadorCasaID]"
                       dataType="i4"
@@ -4263,7 +2631,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{2DE84EE3-8543-4E3E-8719-413B0F23F7C4}"
-          SQLTask:SqlStatementSource="USE [TransfermarktDSA]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[EventosJogo]&#xA;GO&#xA;DELETE FROM [dbo].[FichasJogo]&#xA;GO&#xA;DELETE FROM [dbo].[Alinhamentos]&#xA;GO&#xA;DELETE FROM [dbo].[Jogos]&#xA;GO&#xA;DELETE FROM [dbo].[JogadoresAvaliacao]&#xA;GO&#xA;DELETE FROM [dbo].[Jogadores]&#xA;GO&#xA;DELETE FROM [dbo].[Equipas]&#xA;GO&#xA;DELETE FROM [dbo].[Competicoes]&#xA;GO&#xA;DELETE FROM [dbo].[Arbitros]&#xA;GO&#xA;DELETE FROM [dbo].[Treinadores]&#xA;GO&#xA;DELETE FROM [dbo].[PosicoesJogador]&#xA;GO&#xA;DELETE FROM [dbo].Paises&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE [TransfermarktDSA]&#xA;GO&#xA;&#xA;truncate table [dbo].[FichasJogo]&#xA;GO&#xA;truncate table [dbo].[Jogos]&#xA;GO&#xA;truncate table [dbo].[JogadoresAvaliacao]&#xA;GO&#xA;truncate table [dbo].[Jogadores]&#xA;GO&#xA;truncate table [dbo].[Arbitros]&#xA;GO&#xA;truncate table [dbo].[Treinadores]&#xA;GO&#xA;truncate table [dbo].[PosicoesJogador]&#xA;GO&#xA;truncate table [dbo].Paises&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -4561,14 +2929,6 @@
       DTS:ObjectName="Restrição 1"
       DTS:To="Package\TreinadoresDSA" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Restrição 10]"
-      DTS:CreationName=""
-      DTS:DTSID="{8539B139-9C8E-4D97-BC5E-E0B101D91F38}"
-      DTS:From="Package\JogosDSA"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Restrição 10"
-      DTS:To="Package\AlinhamentosDSA" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 11]"
       DTS:CreationName=""
       DTS:DTSID="{44852FDD-898D-4CF4-971F-788654EF5C70}"
@@ -4587,27 +2947,19 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 3]"
       DTS:CreationName=""
-      DTS:DTSID="{C24AC3B2-7DC7-4675-8186-CEF2E242077B}"
+      DTS:DTSID="{860DD9D7-811B-4D49-BAFD-50D7EF600B4A}"
       DTS:From="Package\ArbitrosDSA"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 3"
-      DTS:To="Package\CompeticoesDSA" />
+      DTS:To="Package\JogadoresDSA" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 4]"
       DTS:CreationName=""
-      DTS:DTSID="{003B1CD0-D3A6-4300-8ED3-CE71345A6EC8}"
-      DTS:From="Package\CompeticoesDSA"
+      DTS:DTSID="{1ACF93EF-EEAE-4E72-91D8-8D0CF4469BD0}"
+      DTS:From="Package\JogosDSA"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 4"
-      DTS:To="Package\EquipasDSA" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Restrição 5]"
-      DTS:CreationName=""
-      DTS:DTSID="{090917F8-7A03-45B9-9CEC-EB90BC758EE6}"
-      DTS:From="Package\EquipasDSA"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Restrição 5"
-      DTS:To="Package\JogadoresDSA" />
+      DTS:To="Package\FichasJogoDSA" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 6]"
       DTS:CreationName=""
@@ -4624,22 +2976,6 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 7"
       DTS:To="Package\JogosDSA" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Restrição 8]"
-      DTS:CreationName=""
-      DTS:DTSID="{28ACCC71-31B8-4A4B-8292-181E574ACE1A}"
-      DTS:From="Package\AlinhamentosDSA"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Restrição 8"
-      DTS:To="Package\FichasJogoDSA" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Restrição 9]"
-      DTS:CreationName=""
-      DTS:DTSID="{16ABC0CD-DA43-4D23-A00B-FB95F95AB63E}"
-      DTS:From="Package\FichasJogoDSA"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Restrição 9"
-      DTS:To="Package\EventosJogoDSA" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
@@ -4654,73 +2990,55 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
-          Id="Package\AlinhamentosDSA"
-          TopLeft="610.930032213109,342.309527612456" />
-        <NodeLayout
           Size="138,42.6666666666667"
           Id="Package\ArbitrosDSA"
-          TopLeft="537.455333116731,170.436723609301" />
-        <NodeLayout
-          Size="164,42.6666666666667"
-          Id="Package\CompeticoesDSA"
-          TopLeft="310.148795659078,186.825817791935" />
-        <NodeLayout
-          Size="140,42.6666666666667"
-          Id="Package\EquipasDSA"
-          TopLeft="228.117549326161,262.54260781327" />
-        <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\EventosJogoDSA"
-          TopLeft="738.831812209739,182.462410445799" />
+          TopLeft="545.788666077535,181.840232256023" />
         <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\FichasJogoDSA"
-          TopLeft="643.742530746276,260.877819122002" />
+          TopLeft="508.325870133206,263.918754761128" />
         <NodeLayout
           Size="197.333333333334,42.6666666666667"
           Id="Package\JogadoresAvaliacaoDSA"
-          TopLeft="247.276774660153,347.878237004958" />
+          TopLeft="110.471225220282,242.205723545338" />
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\JogadoresDSA"
-          TopLeft="438.720218482916,278.499370558713" />
+          TopLeft="346.359111500668,191.832704843629" />
         <NodeLayout
           Size="130.666666666667,42.6666666666667"
           Id="Package\JogosDSA"
-          TopLeft="470.364562306397,395.162288125978" />
+          TopLeft="332.170124039725,307.735388501113" />
         <NodeLayout
           Size="133.333333333334,42.6666666666667"
           Id="Package\PaisesDSA"
-          TopLeft="157.544635814348,123.028820887303" />
+          TopLeft="101.294638328919,111.625312240581" />
         <NodeLayout
           Size="194.666666666667,42.6666666666667"
           Id="Package\PosicoesJogadoresDSA"
-          TopLeft="309.925581383342,96.10902277479" />
+          TopLeft="277.286693953525,116.635338338889" />
+        <NodeLayout
+          Size="180,42.6666666666667"
+          Id="Package\Tarefa Executar SQL"
+          TopLeft="59.41219972502,32.459272826561" />
         <NodeLayout
           Size="158.666666666667,42.6666666666667"
           Id="Package\TreinadoresDSA"
-          TopLeft="555.706820396063,86.4787061206696" />
+          TopLeft="536.262376820853,112.326659053238" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
-          TopLeft="224.211302481015,123.028820887303">
+          TopLeft="234.627971662252,135.463658623068">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85.7142789023264,-5.58646477917939"
+              EndConnector="42.6587222912729,0"
               Start="0,0"
-              End="78.2142789023264,-5.58646477917939">
+              End="35.1587222912729,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-1.58646477917939" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-1.58646477917939"
-                    Point2="0,-5.58646477917939"
-                    Point3="4,-5.58646477917939" />
-                  <mssgle:LineSegment
-                    End="78.2142789023264,-5.58646477917939" />
+                    End="35.1587222912729,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4731,30 +3049,52 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 1]"
-          TopLeft="504.592248050008,117.442356108123">
+          TopLeft="471.953360620192,135.814332029397">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="51.1145723460546,-9.63031665412039"
+              EndConnector="64.3090162006612,0"
               Start="0,0"
-              End="43.6145723460546,-9.63031665412039">
+              End="56.8090162006612,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="21.5572861730273,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.5572861730273,0"
-                    Point2="25.5572861730273,0"
-                    Point3="25.5572861730273,-4" />
+                    End="56.8090162006612,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 11]"
+          TopLeft="149.41219972502,75.1259394932277">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.5491052705655,36.4993727473538"
+              Start="0,0"
+              End="18.5491052705655,28.9993727473538">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="25.5572861730273,-5.63031665412039" />
+                    End="0,14.2496863736769" />
                   <mssgle:CubicBezierSegment
-                    Point1="25.5572861730273,-5.63031665412039"
-                    Point2="25.5572861730273,-9.63031665412039"
-                    Point3="29.5572861730273,-9.63031665412039" />
+                    Point1="0,14.2496863736769"
+                    Point2="0,18.2496863736769"
+                    Point3="4,18.2496863736769" />
                   <mssgle:LineSegment
-                    End="43.6145723460546,-9.63031665412039" />
+                    End="14.5491052705655,18.2496863736769" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.5491052705655,18.2496863736769"
+                    Point2="18.5491052705655,18.2496863736769"
+                    Point3="18.5491052705655,22.2496863736769" />
+                  <mssgle:LineSegment
+                    End="18.5491052705655,28.9993727473538" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4765,30 +3105,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="635.040153729396,129.145372787336">
+          TopLeft="615.192188115861,154.993325719905">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-28.5848206126649,41.2913508219651"
+              EndConnector="0,26.8469065361174"
               Start="0,0"
-              End="-28.5848206126649,33.7913508219651">
+              End="0,19.3469065361174">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.6456754109825" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.6456754109825"
-                    Point2="0,20.6456754109825"
-                    Point3="-4,20.6456754109825" />
-                  <mssgle:LineSegment
-                    End="-24.5848206126649,20.6456754109825" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24.5848206126649,20.6456754109825"
-                    Point2="-28.5848206126649,20.6456754109825"
-                    Point3="-28.5848206126649,24.6456754109825" />
-                  <mssgle:LineSegment
-                    End="-28.5848206126649,33.7913508219651" />
+                    End="0,19.3469065361174" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4799,30 +3127,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 3]"
-          TopLeft="537.455333116731,191.770056942635">
+          TopLeft="545.788666077535,203.173565589356">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-63.3065374576531,16.3890941826335"
+              EndConnector="-47.4295545768671,9.99247258760664"
               Start="0,0"
-              End="-55.8065374576531,16.3890941826335">
+              End="-39.9295545768671,9.99247258760664">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-27.6532687288265,0" />
+                    End="-19.7147772884336,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-27.6532687288265,0"
-                    Point2="-31.6532687288265,0"
-                    Point3="-31.6532687288265,4" />
+                    Point1="-19.7147772884336,0"
+                    Point2="-23.7147772884336,0"
+                    Point3="-23.7147772884336,4" />
                   <mssgle:LineSegment
-                    End="-31.6532687288265,12.3890941826335" />
+                    End="-23.7147772884336,5.99247258760664" />
                   <mssgle:CubicBezierSegment
-                    Point1="-31.6532687288265,12.3890941826335"
-                    Point2="-31.6532687288265,16.3890941826335"
-                    Point3="-35.6532687288265,16.3890941826335" />
+                    Point1="-23.7147772884336,5.99247258760664"
+                    Point2="-23.7147772884336,9.99247258760664"
+                    Point3="-27.7147772884336,9.99247258760664" />
                   <mssgle:LineSegment
-                    End="-55.8065374576531,16.3890941826335" />
+                    End="-39.9295545768671,9.99247258760664" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4833,64 +3161,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 4]"
-          TopLeft="392.148795659078,229.492484458601">
+          TopLeft="462.836790706392,329.068721834446">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-94.0312463329175,33.0501233546684"
+              EndConnector="45.4890794268138,-43.8166337399851"
               Start="0,0"
-              End="-94.0312463329175,25.5501233546684">
+              End="37.9890794268138,-43.8166337399851">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.5250616773342" />
+                    End="18.7445397134069,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.5250616773342"
-                    Point2="0,16.5250616773342"
-                    Point3="-4,16.5250616773342" />
+                    Point1="18.7445397134069,0"
+                    Point2="22.7445397134069,0"
+                    Point3="22.7445397134069,-4" />
                   <mssgle:LineSegment
-                    End="-90.0312463329175,16.5250616773342" />
+                    End="22.7445397134069,-39.8166337399851" />
                   <mssgle:CubicBezierSegment
-                    Point1="-90.0312463329175,16.5250616773342"
-                    Point2="-94.0312463329175,16.5250616773342"
-                    Point3="-94.0312463329175,20.5250616773342" />
+                    Point1="22.7445397134069,-39.8166337399851"
+                    Point2="22.7445397134069,-43.8166337399851"
+                    Point3="26.7445397134069,-43.8166337399851" />
                   <mssgle:LineSegment
-                    End="-94.0312463329175,25.5501233546684" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 5]"
-          TopLeft="368.117549326161,283.875941146603">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="70.6026691567554,15.9567627454427"
-              Start="0,0"
-              End="63.1026691567554,15.9567627454427">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="31.3013345783777,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.3013345783777,0"
-                    Point2="35.3013345783777,0"
-                    Point3="35.3013345783777,4" />
-                  <mssgle:LineSegment
-                    End="35.3013345783777,11.9567627454427" />
-                  <mssgle:CubicBezierSegment
-                    Point1="35.3013345783777,11.9567627454427"
-                    Point2="35.3013345783777,15.9567627454427"
-                    Point3="39.3013345783777,15.9567627454427" />
-                  <mssgle:LineSegment
-                    End="63.1026691567554,15.9567627454427" />
+                    End="37.9890794268138,-43.8166337399851" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4901,98 +3195,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 6]"
-          TopLeft="514.720218482916,321.166037225379">
+          TopLeft="346.359111500668,213.166038176963">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-168.776777156097,26.7121997795791"
+              EndConnector="-38.5545529470526,50.373018701709"
               Start="0,0"
-              End="-168.776777156097,19.2121997795791">
+              End="-31.0545529470526,50.373018701709">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.35609988978955" />
+                    End="-15.2772764735263,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.35609988978955"
-                    Point2="0,13.3560998897895"
-                    Point3="-4,13.3560998897895" />
+                    Point1="-15.2772764735263,0"
+                    Point2="-19.2772764735263,0"
+                    Point3="-19.2772764735263,4" />
                   <mssgle:LineSegment
-                    End="-164.776777156097,13.3560998897895" />
+                    End="-19.2772764735263,46.373018701709" />
                   <mssgle:CubicBezierSegment
-                    Point1="-164.776777156097,13.3560998897895"
-                    Point2="-168.776777156097,13.3560998897895"
-                    Point3="-168.776777156097,17.3560998897895" />
+                    Point1="-19.2772764735263,46.373018701709"
+                    Point2="-19.2772764735263,50.373018701709"
+                    Point3="-23.2772764735263,50.373018701709" />
                   <mssgle:LineSegment
-                    End="-168.776777156097,19.2121997795791" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 8]"
-          TopLeft="694.263365546443,342.309527612456">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="27.4791651998329,-38.7650418237874"
-              Start="0,0"
-              End="27.4791651998329,-31.2650418237874">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-15.3825209118937" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-15.3825209118937"
-                    Point2="0,-19.3825209118937"
-                    Point3="4,-19.3825209118937" />
-                  <mssgle:LineSegment
-                    End="23.4791651998329,-19.3825209118937" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.4791651998329,-19.3825209118937"
-                    Point2="27.4791651998329,-19.3825209118937"
-                    Point3="27.4791651998329,-23.3825209118937" />
-                  <mssgle:LineSegment
-                    End="27.4791651998329,-31.2650418237874" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 9]"
-          TopLeft="721.742530746276,260.877819122002">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="98.422614796797,-35.7487420095356"
-              Start="0,0"
-              End="98.422614796797,-28.2487420095356">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-13.8743710047678" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-13.8743710047678"
-                    Point2="0,-17.8743710047678"
-                    Point3="4,-17.8743710047678" />
-                  <mssgle:LineSegment
-                    End="94.422614796797,-17.8743710047678" />
-                  <mssgle:CubicBezierSegment
-                    Point1="94.422614796797,-17.8743710047678"
-                    Point2="98.422614796797,-17.8743710047678"
-                    Point3="98.422614796797,-21.8743710047678" />
-                  <mssgle:LineSegment
-                    End="98.422614796797,-28.2487420095356" />
+                    End="-31.0545529470526,50.373018701709" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5003,96 +3229,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 7]"
-          TopLeft="444.610107993486,369.211570338292">
+          TopLeft="209.137891886949,284.872390212005">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="25.7544543129112,47.2840511210198"
+              EndConnector="188.36556548611,22.862998289108"
               Start="0,0"
-              End="18.2544543129112,47.2840511210198">
+              End="188.36556548611,15.362998289108">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="8.87722715645558,0" />
+                    End="0,7.43149914455401" />
                   <mssgle:CubicBezierSegment
-                    Point1="8.87722715645558,0"
-                    Point2="12.8772271564556,0"
-                    Point3="12.8772271564556,4" />
+                    Point1="0,7.43149914455401"
+                    Point2="0,11.431499144554"
+                    Point3="4,11.431499144554" />
                   <mssgle:LineSegment
-                    End="12.8772271564556,43.2840511210198" />
+                    End="184.36556548611,11.431499144554" />
                   <mssgle:CubicBezierSegment
-                    Point1="12.8772271564556,43.2840511210198"
-                    Point2="12.8772271564556,47.2840511210198"
-                    Point3="16.8772271564556,47.2840511210198" />
+                    Point1="184.36556548611,11.431499144554"
+                    Point2="188.36556548611,11.431499144554"
+                    Point3="188.36556548611,15.431499144554" />
                   <mssgle:LineSegment
-                    End="18.2544543129112,47.2840511210198" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 10]"
-          TopLeft="556.142340084175,395.162288125978">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="54.7876921289342,-31.519427180189"
-              Start="0,0"
-              End="47.2876921289342,-31.519427180189">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-27.519427180189" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-27.519427180189"
-                    Point2="0,-31.519427180189"
-                    Point3="4,-31.519427180189" />
-                  <mssgle:LineSegment
-                    End="47.2876921289342,-31.519427180189" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="180,42.6666666666667"
-          Id="Package\Tarefa Executar SQL"
-          TopLeft="59.41219972502,32.459272826561" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 11]"
-          TopLeft="149.41219972502,75.1259394932277">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.9102138671062,47.9028813940751"
-              Start="0,0"
-              End="53.9102138671062,40.4028813940751">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.4009178225742" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.4009178225742"
-                    Point2="0,28.4009178225742"
-                    Point3="4,28.4009178225742" />
-                  <mssgle:LineSegment
-                    End="49.9102138671062,28.4009178225742" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.9102138671062,28.4009178225742"
-                    Point2="53.9102138671062,28.4009178225742"
-                    Point3="53.9102138671062,32.4009178225742" />
-                  <mssgle:LineSegment
-                    End="53.9102138671062,40.4028813940751" />
+                    End="188.36556548611,15.362998289108" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5104,72 +3264,6 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <TaskHost
-    design-time-name="Package\AlinhamentosDSA">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\AlinhamentosDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\AlinhamentosDSA\OLE DB Destination"
-          TopLeft="123.124994495884,110.15789352733" />
-        <EdgeLayout
-          Id="Package\AlinhamentosDSA.Paths[OLE DB Source Output]"
-          TopLeft="214.208327438062,51.5614034111095">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.5964901162207"
-              Start="0,0"
-              End="0,51.0964901162207">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.0964901162207" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\AlinhamentosDSA\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\AlinhamentosDSA\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\ArbitrosDSA">
     <LayoutInfo>
@@ -5237,198 +3331,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\ArbitrosDSA\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\CompeticoesDSA">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\CompeticoesDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\CompeticoesDSA\OLE DB Destination"
-          TopLeft="123.124994495884,110.15789352733" />
-        <EdgeLayout
-          Id="Package\CompeticoesDSA.Paths[OLE DB Source Output]"
-          TopLeft="214.208327438062,51.5614034111095">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.5964901162205"
-              Start="0,0"
-              End="0,51.0964901162205">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.0964901162205" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\CompeticoesDSA\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CompeticoesDSA\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\EquipasDSA">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\EquipasDSA\OLE DB Destination"
-          TopLeft="123.124994495884,110.15789352733" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\EquipasDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
-        <EdgeLayout
-          Id="Package\EquipasDSA.Paths[OLE DB Source Output]"
-          TopLeft="214.208327438062,51.5614034111095">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.5964901162207"
-              Start="0,0"
-              End="0,51.0964901162207">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.0964901162207" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\EquipasDSA\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EquipasDSA\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\EventosJogoDSA">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\EventosJogoDSA\OLE DB Destination"
-          TopLeft="123.124994495884,110.15789352733" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\EventosJogoDSA\OLE DB Source"
-          TopLeft="140.624993713573,8.89473674444281" />
-        <EdgeLayout
-          Id="Package\EventosJogoDSA.Paths[OLE DB Source Output]"
-          TopLeft="214.208327438062,51.5614034111095">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.5964901162207"
-              Start="0,0"
-              End="0,51.0964901162207">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.0964901162207" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\EventosJogoDSA\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EventosJogoDSA\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5510,7 +3412,7 @@
     design-time-name="Package\JogadoresAvaliacaoDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\JogadoresAvaliacaoDSA\OLE DB Source"
@@ -5538,7 +3440,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5574,7 +3478,7 @@
     design-time-name="Package\JogadoresDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\JogadoresDSA\OLE DB Source"
@@ -5602,7 +3506,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5638,7 +3544,7 @@
     design-time-name="Package\JogosDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\JogosDSA\OLE DB Source"
@@ -5666,7 +3572,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5702,7 +3610,7 @@
     design-time-name="Package\PaisesDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\PaisesDSA\OLE DB Destination"
@@ -5730,7 +3638,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5766,7 +3676,7 @@
     design-time-name="Package\PosicoesJogadoresDSA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\PosicoesJogadoresDSA\OLE DB Destination"
@@ -5794,7 +3704,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
