@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{4CCF7C05-6825-43D5-934E-9D163AF70611}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{D5F338B1-8204-43CD-8FB1-3454002FCB92}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1740,113 +1740,125 @@ where [refTable].[JogoID] = ? and [refTable].[JogadorID] = ? and [refTable].[jog
         <NodeLayout
           Size="224,42.6666666666667"
           Id="Package\FctFichasJogo\InsertNewRowsFctFichasJogo"
-          TopLeft="194.999991282821,661.087715121298" />
+          TopLeft="384.843732796145,352.249996752724" />
         <NodeLayout
           Size="193.333333333334,42.6666666666667"
           Id="Package\FctFichasJogo\LookupDimJogadorAval"
-          TopLeft="233.749989550561,271.01754313845" />
+          TopLeft="517.343726872933,171.807017911972" />
         <NodeLayout
           Size="190.666666666667,42.6666666666667"
           Id="Package\FctFichasJogo\LookupDimJogadorPos"
-          TopLeft="234.374989522621,196.403507742718" />
+          TopLeft="476.562478695997,92.0614036252158" />
         <NodeLayout
           Size="153.333333333334,42.6666666666667"
           Id="Package\FctFichasJogo\DsaFichasJogo"
-          TopLeft="251.24998876825,27.3684207521317" />
+          TopLeft="216.093740339857,19.6710524155946" />
         <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\FctFichasJogo\LookupDimDate"
-          TopLeft="251.24998876825,487.035084992262" />
+          TopLeft="430.937480735593,247.561401626891" />
         <NodeLayout
           Size="193.333333333334,42.6666666666667"
           Id="Package\FctFichasJogo\LookupDimJogadorPais"
-          TopLeft="234.999989494682,117.684209234166" />
+          TopLeft="191.249991450459,105.710525155108" />
         <NodeLayout
           Size="192,42.6666666666667"
           Id="Package\FctFichasJogo\LookupDimJogoArbTrei"
-          TopLeft="233.749989550561,343.578946977771" />
+          TopLeft="183.749991785735,174.236843573956" />
         <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\FctFichasJogo\Derived Column"
-          TopLeft="284.374987287447,418.684209376904" />
+          TopLeft="232.031239627395,249.846490294643" />
         <NodeLayout
           Size="178.666666666667,42.6666666666667"
           Id="Package\FctFichasJogo\LookupFctFichaJogo"
-          TopLeft="229.999989718199,574.192980660654" />
+          TopLeft="648.749970998616,261.890350424565" />
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[Lookup Match Output1]"
-          TopLeft="330.062489536591,239.070174409385">
+          TopLeft="571.89581202933,134.728070291882">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31.9473687290649"
+              EndConnector="42.1145815102698,37.07894762009"
               Start="0,0"
-              End="0,24.4473687290649">
+              End="42.1145815102698,29.57894762009">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.4473687290649" />
+                    End="0,14.539473810045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.539473810045"
+                    Point2="0,18.539473810045"
+                    Point3="4,18.539473810045" />
+                  <mssgle:LineSegment
+                    End="38.1145815102698,18.539473810045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.1145815102698,18.539473810045"
+                    Point2="42.1145815102698,18.539473810045"
+                    Point3="42.1145815102698,22.539473810045" />
+                  <mssgle:LineSegment
+                    End="42.1145815102698,29.57894762009" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.41899686453247,96.3827734375,11.609375"
+              BoundingBox="-27.1340959636151,23.539473810045,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[Lookup Match Output]"
-          TopLeft="330.687489508652,160.350875900833">
+          TopLeft="384.583324783793,127.043858488442">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.0526318418848"
+              EndConnector="91.9791539122039,-13.6491215298926"
               Start="0,0"
-              End="0,28.5526318418848">
+              End="84.4791539122039,-13.6491215298926">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5526318418848" />
+                    End="41.989576956102,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.989576956102,0"
+                    Point2="45.989576956102,0"
+                    Point3="45.989576956102,-4" />
+                  <mssgle:LineSegment
+                    End="45.989576956102,-9.6491215298926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.989576956102,-9.6491215298926"
+                    Point2="45.989576956102,-13.6491215298926"
+                    Point3="49.989576956102,-13.6491215298926" />
+                  <mssgle:LineSegment
+                    End="84.4791539122039,-13.6491215298926" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.47162842094239,96.3827734375,11.609375"
+              BoundingBox="-2.20180976264805,1,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[Derived Column Output]"
-          TopLeft="362.374987287447,461.35087604357">
+          TopLeft="388.031239627395,270.0372792941">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-33.1249985191972,25.6842089486916"
+              EndConnector="42.9062411081982,0"
               Start="0,0"
-              End="-33.1249985191972,18.1842089486916">
+              End="35.4062411081982,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.8421044743458" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.8421044743458"
-                    Point2="0,12.8421044743458"
-                    Point3="-4,12.8421044743458" />
-                  <mssgle:LineSegment
-                    End="-29.1249985191972,12.8421044743458" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-29.1249985191972,12.8421044743458"
-                    Point2="-33.1249985191972,12.8421044743458"
-                    Point3="-33.1249985191972,16.8421044743458" />
-                  <mssgle:LineSegment
-                    End="-33.1249985191972,18.1842089486916" />
+                    End="35.4062411081982,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1857,18 +1869,18 @@ where [refTable].[JogoID] = ? and [refTable].[JogadorID] = ? and [refTable].[jog
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[OLE DB Source Output]"
-          TopLeft="329.791655798133,70.0350874187984">
+          TopLeft="290.338532561825,62.3377190822613">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.6491218153681"
+              EndConnector="0,43.3728060728471"
               Start="0,0"
-              End="0,40.1491218153681">
+              End="0,35.8728060728471">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.1491218153681" />
+                    End="0,35.8728060728471" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1879,133 +1891,133 @@ where [refTable].[JogoID] = ? and [refTable].[JogadorID] = ? and [refTable].[jog
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[Lookup No Match Output]"
-          TopLeft="319.333323051532,616.85964732732">
+          TopLeft="738.083304331949,304.557017091232">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-12.3333317687115,44.2280677939773"
+              EndConnector="-241.239571535805,47.6929796614916"
               Start="0,0"
-              End="-12.3333317687115,36.7280677939773">
+              End="-241.239571535805,40.1929796614916">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.1140338969886" />
+                    End="0,19.8464898307458" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.1140338969886"
-                    Point2="0,22.1140338969886"
-                    Point3="-4,22.1140338969886" />
+                    Point1="0,19.8464898307458"
+                    Point2="0,23.8464898307458"
+                    Point3="-4,23.8464898307458" />
                   <mssgle:LineSegment
-                    End="-8.3333317687115,22.1140338969886" />
+                    End="-237.239571535805,23.8464898307458" />
                   <mssgle:CubicBezierSegment
-                    Point1="-8.3333317687115,22.1140338969886"
-                    Point2="-12.3333317687115,22.1140338969886"
-                    Point3="-12.3333317687115,26.1140338969886" />
+                    Point1="-237.239571535805,23.8464898307458"
+                    Point2="-241.239571535805,23.8464898307458"
+                    Point3="-241.239571535805,27.8464898307458" />
                   <mssgle:LineSegment
-                    End="-12.3333317687115,36.7280677939773" />
+                    End="-241.239571535805,40.1929796614916" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-61.9730526031057,27.1140338969886,111.6127734375,11.609375"
+              BoundingBox="-176.426172486652,28.8464898307458,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[Lookup Match Output4]"
-          TopLeft="329.749989550561,386.245613644438">
+          TopLeft="279.749991785735,216.903510240623">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32.6249977368862,32.4385957324659"
+              EndConnector="30.2812478416598,32.94298005402"
               Start="0,0"
-              End="32.6249977368862,24.9385957324659">
+              End="30.2812478416598,25.44298005402">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.2192978662329" />
+                    End="0,12.47149002701" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.2192978662329"
-                    Point2="0,16.2192978662329"
-                    Point3="4,16.2192978662329" />
+                    Point1="0,12.47149002701"
+                    Point2="0,16.47149002701"
+                    Point3="4,16.47149002701" />
                   <mssgle:LineSegment
-                    End="28.6249977368862,16.2192978662329" />
+                    End="26.2812478416598,16.47149002701" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.6249977368862,16.2192978662329"
-                    Point2="32.6249977368862,16.2192978662329"
-                    Point3="32.6249977368862,20.2192978662329" />
+                    Point1="26.2812478416598,16.47149002701"
+                    Point2="30.2812478416598,16.47149002701"
+                    Point3="30.2812478416598,20.47149002701" />
                   <mssgle:LineSegment
-                    End="32.6249977368862,24.9385957324659" />
+                    End="30.2812478416598,25.44298005402" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-31.8788878503069,21.2192978662329,96.3827734375,11.609375"
+              BoundingBox="-33.0507627979201,21.47149002701,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[Lookup Match Output3]"
-          TopLeft="329.24998876825,529.701751658929">
+          TopLeft="586.937480735593,268.894734960225">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.9166657167176,44.4912290017251"
+              EndConnector="61.8124902630228,14.3289487976739"
               Start="0,0"
-              End="-9.9166657167176,36.9912290017251">
+              End="54.3124902630228,14.3289487976739">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.2456145008625" />
+                    End="26.9062451315114,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.2456145008625"
-                    Point2="0,22.2456145008625"
-                    Point3="-4,22.2456145008625" />
+                    Point1="26.9062451315114,0"
+                    Point2="30.9062451315114,0"
+                    Point3="30.9062451315114,4" />
                   <mssgle:LineSegment
-                    End="-5.9166657167176,22.2456145008625" />
+                    End="30.9062451315114,10.3289487976739" />
                   <mssgle:CubicBezierSegment
-                    Point1="-5.9166657167176,22.2456145008625"
-                    Point2="-9.9166657167176,22.2456145008625"
-                    Point3="-9.9166657167176,26.2456145008625" />
+                    Point1="30.9062451315114,10.3289487976739"
+                    Point2="30.9062451315114,14.3289487976739"
+                    Point3="34.9062451315114,14.3289487976739" />
                   <mssgle:LineSegment
-                    End="-9.9166657167176,36.9912290017251" />
+                    End="54.3124902630228,14.3289487976739" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-53.1497195771088,27.2456145008625,96.3827734375,11.609375"
+              BoundingBox="-17.2851415872386,-17.609375,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FctFichasJogo.Paths[Lookup Match Output2]"
-          TopLeft="330.083322883894,313.684209805116">
+          TopLeft="517.343726872933,194.355264076298">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29.894737172655"
+              EndConnector="-141.593735087198,0"
               Start="0,0"
-              End="0,22.394737172655">
+              End="-134.093735087198,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.394737172655" />
+                    End="-134.093735087198,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,5.3926810863275,96.3827734375,11.609375"
+              BoundingBox="-115.238254262349,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

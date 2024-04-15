@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{7D4C3299-6E3C-4C37-8BE9-D4FE827BDBA2}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{70136582-EFFF-4BF6-B607-5CD98750EB7A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -471,7 +471,7 @@ where [refTable].[ID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DimJogadoresPais\17:invalid};</property>
+                  name="ParameterMap">#{Package\DimJogadoresPais\321:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -936,17 +936,21 @@ where [refTable].[ID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\DimJogadoresPais\OLE DB Destination"
-          TopLeft="329.583318599811,322.725143065284" />
+          Size="136,42.6666666666667"
+          Id="Package\DimJogadoresPais\LookupPais"
+          TopLeft="233.124989578501,123.157893384593" />
         <NodeLayout
           Size="204,42.6666666666667"
           Id="Package\DimJogadoresPais\LookupDimJogadoresPais"
           TopLeft="203.124990919605,225.789471205087" />
         <NodeLayout
-          Size="136,42.6666666666667"
-          Id="Package\DimJogadoresPais\LookupPais"
-          TopLeft="233.124989578501,123.157893384593" />
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\DimJogadoresPais\OLE DB Command"
+          TopLeft="72.4999967589975,309.543857846124" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\DimJogadoresPais\OLE DB Destination"
+          TopLeft="329.583318599811,322.725143065284" />
         <NodeLayout
           Size="148,42.6666666666667"
           Id="Package\DimJogadoresPais\DsaJogadores"
@@ -1022,6 +1026,42 @@ where [refTable].[ID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\DimJogadoresPais.Paths[Lookup Match Output1]"
+          TopLeft="272.458324252938,268.456137871754">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-114.624994160608,41.0877199743703"
+              Start="0,0"
+              End="-114.624994160608,33.5877199743703">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.626937265893" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.626937265893"
+                    Point2="0,16.626937265893"
+                    Point3="-4,16.626937265893" />
+                  <mssgle:LineSegment
+                    End="-110.624994160608,16.626937265893" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-110.624994160608,16.626937265893"
+                    Point2="-114.624994160608,16.626937265893"
+                    Point3="-114.624994160608,20.626937265893" />
+                  <mssgle:LineSegment
+                    End="-114.624994160608,33.5877199743703" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-105.503883799054,21.626937265893,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\DimJogadoresPais.Paths[Lookup Match Output]"
           TopLeft="303.124990249053,165.82456005126">
           <EdgeLayout.Curve>
@@ -1042,46 +1082,6 @@ where [refTable].[ID] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-48.19138671875,20.4277680769133,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170.666666666667,42.6666666666667"
-          Id="Package\DimJogadoresPais\OLE DB Command"
-          TopLeft="72.4999967589975,309.543857846124" />
-        <EdgeLayout
-          Id="Package\DimJogadoresPais.Paths[Lookup Match Output1]"
-          TopLeft="272.458324252939,268.456137871753">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-114.624994160608,41.0877199743705"
-              Start="0,0"
-              End="-114.624994160608,33.5877199743705">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.6269372658931" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.6269372658931"
-                    Point2="0,16.6269372658931"
-                    Point3="-4,16.6269372658931" />
-                  <mssgle:LineSegment
-                    End="-110.624994160608,16.6269372658931" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-110.624994160608,16.6269372658931"
-                    Point2="-114.624994160608,16.6269372658931"
-                    Point3="-114.624994160608,20.6269372658931" />
-                  <mssgle:LineSegment
-                    End="-114.624994160608,33.5877199743705" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-105.503883799054,21.6269372658931,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1112,25 +1112,15 @@ where [refTable].[ID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimJogadoresPais\LookupDimJogadoresPais">
+    design-time-name="Package\DimJogadoresPais\DsaJogadores">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dim_jogadoresPaises]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1148,15 +1138,25 @@ where [refTable].[ID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimJogadoresPais\DsaJogadores">
+    design-time-name="Package\DimJogadoresPais\LookupDimJogadoresPais">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dim_jogadoresPaises]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

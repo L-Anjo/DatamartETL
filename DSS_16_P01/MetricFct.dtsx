@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="MetricFct"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{F2DB1B22-E58E-4230-A2AA-FDE633723218}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{2E2BE484-4C96-4C3E-A9B6-AA331F74AD72}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4755,13 +4755,17 @@ ORDER BY
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
+          Size="153.333333333334,42.6666666666667"
+          Id="Package\ArbitrosCartoes"
+          TopLeft="266.874988069758,216.929823306817" />
+        <NodeLayout
           Size="145.333333333334,42.6666666666667"
           Id="Package\GolosPorPais"
           TopLeft="266.249988097698,56.7894730606729" />
         <NodeLayout
-          Size="216,42.6666666666667"
-          Id="Package\PercentagemGolAssCartPos"
-          TopLeft="243.124989131466,164.21052451279" />
+          Size="210.666666666667,42.6666666666667"
+          Id="Package\JogadorGolAssCartPorPais"
+          TopLeft="241.249989215285,271.052631984622" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\JogGolosPorMinuto"
@@ -4771,17 +4775,13 @@ ORDER BY
           Id="Package\MelhoresJogadoresUltAno"
           TopLeft="246.249988991767,0.719299364976109" />
         <NodeLayout
-          Size="153.333333333334,42.6666666666667"
-          Id="Package\ArbitrosCartoes"
-          TopLeft="266.874988069758,216.929823306817" />
-        <NodeLayout
-          Size="210.666666666667,42.6666666666667"
-          Id="Package\JogadorGolAssCartPorPais"
-          TopLeft="241.249989215285,271.052631984622" />
-        <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\MinutosAvalJog"
           TopLeft="272.499987818301,323.087720259845" />
+        <NodeLayout
+          Size="216,42.6666666666667"
+          Id="Package\PercentagemGolAssCartPos"
+          TopLeft="243.124989131466,164.21052451279" />
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\TreinadoresGolos"
@@ -4790,64 +4790,137 @@ ORDER BY
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\GolosPorPais">
+    design-time-name="Package\ArbitrosCartoes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="114.666666666667,42.6666666666667"
-          Id="Package\GolosPorPais\Lookup"
-          TopLeft="193.392848497523,116.999998715363" />
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\GolosPorPais\Derived Column"
-          TopLeft="250.892845927073,285.824559765785" />
-        <NodeLayout
-          Size="176,42.6666666666667"
-          Id="Package\GolosPorPais\FctFichasJogoTable"
-          TopLeft="173.392849391593,38.3157890529844" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="162.666666666667,42.6666666666667"
-          Id="Package\GolosPorPais\Excel Destination"
-          TopLeft="86.5178532752078,341.98245357859" />
+          Id="Package\ArbitrosCartoes\Excel Destination"
+          TopLeft="98.0681799944829,255.279106315744" />
         <NodeLayout
-          Size="129.333333333334,42.6666666666667"
-          Id="Package\GolosPorPais\Aggregate"
-          TopLeft="187.14284877692,209.368418753808" />
+          Size="176,42"
+          Id="Package\ArbitrosCartoes\FctFichasJogoTable"
+          TopLeft="206.249994952232,111.666666614905" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\ArbitrosCartoes\Derived Column"
+          TopLeft="262.443172646348,199.121212502939" />
         <EdgeLayout
-          Id="Package\GolosPorPais.Paths[Aggregate Output 1]"
-          TopLeft="251.809515443586,252.035085420474">
+          Id="Package\ArbitrosCartoes.Paths[OLE DB Source Output]"
+          TopLeft="294.249994952232,153.666666614905">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="77.0833304834864,33.7894743453102"
+              EndConnector="46.1931776941162,45.4545458880338"
               Start="0,0"
-              End="77.0833304834864,26.2894743453102">
+              End="46.1931776941162,37.9545458880338">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.8947371726551" />
+                    End="0,18.7272729440169" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.8947371726551"
-                    Point2="0,16.8947371726551"
-                    Point3="4,16.8947371726551" />
+                    Point1="0,18.7272729440169"
+                    Point2="0,22.7272729440169"
+                    Point3="4,22.7272729440169" />
                   <mssgle:LineSegment
-                    End="73.0833304834864,16.8947371726551" />
+                    End="42.1931776941162,22.7272729440169" />
                   <mssgle:CubicBezierSegment
-                    Point1="73.0833304834864,16.8947371726551"
-                    Point2="77.0833304834864,16.8947371726551"
-                    Point3="77.0833304834864,20.8947371726551" />
+                    Point1="42.1931776941162,22.7272729440169"
+                    Point2="46.1931776941162,22.7272729440169"
+                    Point3="46.1931776941162,26.7272729440169" />
                   <mssgle:LineSegment
-                    End="77.0833304834864,26.2894743453102" />
+                    End="46.1931776941162,37.9545458880338" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ArbitrosCartoes.Paths[Derived Column Output]"
+          TopLeft="262.443172646348,220.454545836272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.0416593185317,34.8245604794717"
+              Start="0,0"
+              End="-83.0416593185317,27.3245604794717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-79.0416593185317,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.0416593185317,0"
+                    Point2="-83.0416593185317,0"
+                    Point3="-83.0416593185317,4" />
+                  <mssgle:LineSegment
+                    End="-83.0416593185317,27.3245604794717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ArbitrosCartoes\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ArbitrosCartoes\FctFichasJogoTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\GolosPorPais">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\GolosPorPais\Derived Column"
+          TopLeft="250.892845927073,285.824559765785" />
+        <NodeLayout
+          Size="114.666666666667,42.6666666666667"
+          Id="Package\GolosPorPais\Lookup"
+          TopLeft="193.392848497523,116.999998715363" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\GolosPorPais\Excel Destination"
+          TopLeft="86.5178532752078,341.98245357859" />
+        <NodeLayout
+          Size="176,42.6666666666667"
+          Id="Package\GolosPorPais\FctFichasJogoTable"
+          TopLeft="173.392849391593,38.3157890529844" />
+        <NodeLayout
+          Size="129.333333333334,42.6666666666667"
+          Id="Package\GolosPorPais\Aggregate"
+          TopLeft="187.14284877692,209.368418753808" />
         <EdgeLayout
           Id="Package\GolosPorPais.Paths[OLE DB Source Output]"
           TopLeft="261.392849391593,80.9824557196511">
@@ -4879,7 +4952,9 @@ ORDER BY
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4931,7 +5006,45 @@ ORDER BY
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\GolosPorPais.Paths[Aggregate Output 1]"
+          TopLeft="251.809515443586,252.035085420474">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.0833304834864,33.7894743453102"
+              Start="0,0"
+              End="77.0833304834864,26.2894743453102">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.8947371726551" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.8947371726551"
+                    Point2="0,16.8947371726551"
+                    Point3="4,16.8947371726551" />
+                  <mssgle:LineSegment
+                    End="73.0833304834864,16.8947371726551" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73.0833304834864,16.8947371726551"
+                    Point2="77.0833304834864,16.8947371726551"
+                    Point3="77.0833304834864,20.8947371726551" />
+                  <mssgle:LineSegment
+                    End="77.0833304834864,26.2894743453102" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4956,7 +5069,7 @@ ORDER BY
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4966,7 +5079,7 @@ ORDER BY
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4983,6 +5096,383 @@ ORDER BY
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\JogadorGolAssCartPorPais">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\JogadorGolAssCartPorPais\FctFichasJogoTable"
+          TopLeft="206.249994952232,111.666666614905" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\JogadorGolAssCartPorPais\Excel Destination"
+          TopLeft="98.0681799944829,255.279106315744" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\JogadorGolAssCartPorPais\Derived Column"
+          TopLeft="262.443172646348,199.121212502939" />
+        <EdgeLayout
+          Id="Package\JogadorGolAssCartPorPais.Paths[OLE DB Source Output]"
+          TopLeft="294.249994952232,153.666666614905">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.1931776941162,45.4545458880338"
+              Start="0,0"
+              End="46.1931776941162,37.9545458880338">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7272729440169" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7272729440169"
+                    Point2="0,22.7272729440169"
+                    Point3="4,22.7272729440169" />
+                  <mssgle:LineSegment
+                    End="42.1931776941162,22.7272729440169" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.1931776941162,22.7272729440169"
+                    Point2="46.1931776941162,22.7272729440169"
+                    Point3="46.1931776941162,26.7272729440169" />
+                  <mssgle:LineSegment
+                    End="46.1931776941162,37.9545458880338" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\JogadorGolAssCartPorPais.Paths[Derived Column Output]"
+          TopLeft="262.443172646348,220.454545836272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.0416593185317,34.8245604794717"
+              Start="0,0"
+              End="-83.0416593185317,27.3245604794717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-79.0416593185317,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.0416593185317,0"
+                    Point2="-83.0416593185317,0"
+                    Point3="-83.0416593185317,4" />
+                  <mssgle:LineSegment
+                    End="-83.0416593185317,27.3245604794717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\JogadorGolAssCartPorPais\FctFichasJogoTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\JogadorGolAssCartPorPais\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\JogGolosPorMinuto">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\JogGolosPorMinuto\FctFichasJogoTable"
+          TopLeft="206.249994952232,111.666666614905" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\JogGolosPorMinuto\Excel Destination"
+          TopLeft="98.0681799944829,255.279106315744" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\JogGolosPorMinuto\Derived Column"
+          TopLeft="262.443172646348,199.121212502939" />
+        <EdgeLayout
+          Id="Package\JogGolosPorMinuto.Paths[OLE DB Source Output]"
+          TopLeft="294.249994952232,153.666666614905">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.1931776941162,45.4545458880338"
+              Start="0,0"
+              End="46.1931776941162,37.9545458880338">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7272729440169" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7272729440169"
+                    Point2="0,22.7272729440169"
+                    Point3="4,22.7272729440169" />
+                  <mssgle:LineSegment
+                    End="42.1931776941162,22.7272729440169" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.1931776941162,22.7272729440169"
+                    Point2="46.1931776941162,22.7272729440169"
+                    Point3="46.1931776941162,26.7272729440169" />
+                  <mssgle:LineSegment
+                    End="46.1931776941162,37.9545458880338" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\JogGolosPorMinuto.Paths[Derived Column Output]"
+          TopLeft="262.443172646348,220.454545836272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.0416593185317,34.8245604794717"
+              Start="0,0"
+              End="-83.0416593185317,27.3245604794717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-79.0416593185317,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.0416593185317,0"
+                    Point2="-83.0416593185317,0"
+                    Point3="-83.0416593185317,4" />
+                  <mssgle:LineSegment
+                    End="-83.0416593185317,27.3245604794717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\JogGolosPorMinuto\FctFichasJogoTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\JogGolosPorMinuto\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\MelhoresJogadoresUltAno">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\MelhoresJogadoresUltAno\Excel Destination"
+          TopLeft="98.0681799944829,255.279106315744" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\MelhoresJogadoresUltAno\Derived Column"
+          TopLeft="262.443172646348,199.121212502939" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\MelhoresJogadoresUltAno\FctFichasJogoTable"
+          TopLeft="206.249994952232,111.666666614905" />
+        <EdgeLayout
+          Id="Package\MelhoresJogadoresUltAno.Paths[OLE DB Source Output]"
+          TopLeft="294.249994952232,153.666666614905">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.1931776941162,45.4545458880338"
+              Start="0,0"
+              End="46.1931776941162,37.9545458880338">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7272729440169" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7272729440169"
+                    Point2="0,22.7272729440169"
+                    Point3="4,22.7272729440169" />
+                  <mssgle:LineSegment
+                    End="42.1931776941162,22.7272729440169" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.1931776941162,22.7272729440169"
+                    Point2="46.1931776941162,22.7272729440169"
+                    Point3="46.1931776941162,26.7272729440169" />
+                  <mssgle:LineSegment
+                    End="46.1931776941162,37.9545458880338" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\MelhoresJogadoresUltAno.Paths[Derived Column Output]"
+          TopLeft="262.443172646348,220.454545836272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.0416593185317,34.8245604794717"
+              Start="0,0"
+              End="-83.0416593185317,27.3245604794717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-79.0416593185317,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.0416593185317,0"
+                    Point2="-83.0416593185317,0"
+                    Point3="-83.0416593185317,4" />
+                  <mssgle:LineSegment
+                    End="-83.0416593185317,27.3245604794717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\MelhoresJogadoresUltAno\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\MelhoresJogadoresUltAno\FctFichasJogoTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\MinutosAvalJog">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\MinutosAvalJog\Derived Column"
+          TopLeft="376.999988764525,206.999993830919" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\MinutosAvalJog\FctFichasJogoTable"
+          TopLeft="206.249994952232,111.666666614905" />
+        <EdgeLayout
+          Id="Package\MinutosAvalJog.Paths[OLE DB Source Output]"
+          TopLeft="294.249994952232,153.666666614905">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160.749993812293,53.3333272160144"
+              Start="0,0"
+              End="160.749993812293,45.8333272160144">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.6666636080072" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.6666636080072"
+                    Point2="0,26.6666636080072"
+                    Point3="4,26.6666636080072" />
+                  <mssgle:LineSegment
+                    End="156.749993812293,26.6666636080072" />
+                  <mssgle:CubicBezierSegment
+                    Point1="156.749993812293,26.6666636080072"
+                    Point2="160.749993812293,26.6666636080072"
+                    Point3="160.749993812293,30.6666636080072" />
+                  <mssgle:LineSegment
+                    End="160.749993812293,45.8333272160144" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="72.3749969061464,31.6666636080072,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\MinutosAvalJog\FctFichasJogoTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5095,522 +5585,22 @@ ORDER BY
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\JogGolosPorMinuto">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="176,42"
-          Id="Package\JogGolosPorMinuto\FctFichasJogoTable"
-          TopLeft="206.249994952232,111.666666614905" />
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\JogGolosPorMinuto\Derived Column"
-          TopLeft="262.443172646348,199.121212502939" />
-        <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\JogGolosPorMinuto\Excel Destination"
-          TopLeft="98.0681799944829,255.279106315744" />
-        <EdgeLayout
-          Id="Package\JogGolosPorMinuto.Paths[Derived Column Output]"
-          TopLeft="262.443172646348,220.454545836272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-83.0416593185317,34.8245604794717"
-              Start="0,0"
-              End="-83.0416593185317,27.3245604794717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-79.0416593185317,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-79.0416593185317,0"
-                    Point2="-83.0416593185317,0"
-                    Point3="-83.0416593185317,4" />
-                  <mssgle:LineSegment
-                    End="-83.0416593185317,27.3245604794717" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\JogGolosPorMinuto.Paths[OLE DB Source Output]"
-          TopLeft="294.249994952232,153.666666614905">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.1931776941162,45.4545458880338"
-              Start="0,0"
-              End="46.1931776941162,37.9545458880338">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.7272729440169"
-                    Point2="0,22.7272729440169"
-                    Point3="4,22.7272729440169" />
-                  <mssgle:LineSegment
-                    End="42.1931776941162,22.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.1931776941162,22.7272729440169"
-                    Point2="46.1931776941162,22.7272729440169"
-                    Point3="46.1931776941162,26.7272729440169" />
-                  <mssgle:LineSegment
-                    End="46.1931776941162,37.9545458880338" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\JogGolosPorMinuto\FctFichasJogoTable">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\JogGolosPorMinuto\Excel Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\MelhoresJogadoresUltAno">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="176,42"
-          Id="Package\MelhoresJogadoresUltAno\FctFichasJogoTable"
-          TopLeft="206.249994952232,111.666666614905" />
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\MelhoresJogadoresUltAno\Derived Column"
-          TopLeft="262.443172646348,199.121212502939" />
-        <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\MelhoresJogadoresUltAno\Excel Destination"
-          TopLeft="98.0681799944829,255.279106315744" />
-        <EdgeLayout
-          Id="Package\MelhoresJogadoresUltAno.Paths[Derived Column Output]"
-          TopLeft="262.443172646348,220.454545836272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-83.0416593185317,34.8245604794717"
-              Start="0,0"
-              End="-83.0416593185317,27.3245604794717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-79.0416593185317,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-79.0416593185317,0"
-                    Point2="-83.0416593185317,0"
-                    Point3="-83.0416593185317,4" />
-                  <mssgle:LineSegment
-                    End="-83.0416593185317,27.3245604794717" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\MelhoresJogadoresUltAno.Paths[OLE DB Source Output]"
-          TopLeft="294.249994952232,153.666666614905">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.1931776941162,45.4545458880338"
-              Start="0,0"
-              End="46.1931776941162,37.9545458880338">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.7272729440169"
-                    Point2="0,22.7272729440169"
-                    Point3="4,22.7272729440169" />
-                  <mssgle:LineSegment
-                    End="42.1931776941162,22.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.1931776941162,22.7272729440169"
-                    Point2="46.1931776941162,22.7272729440169"
-                    Point3="46.1931776941162,26.7272729440169" />
-                  <mssgle:LineSegment
-                    End="46.1931776941162,37.9545458880338" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\MelhoresJogadoresUltAno\FctFichasJogoTable">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\MelhoresJogadoresUltAno\Excel Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\ArbitrosCartoes">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="176,42"
-          Id="Package\ArbitrosCartoes\FctFichasJogoTable"
-          TopLeft="206.249994952232,111.666666614905" />
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\ArbitrosCartoes\Derived Column"
-          TopLeft="262.443172646348,199.121212502939" />
-        <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\ArbitrosCartoes\Excel Destination"
-          TopLeft="98.0681799944829,255.279106315744" />
-        <EdgeLayout
-          Id="Package\ArbitrosCartoes.Paths[Derived Column Output]"
-          TopLeft="262.443172646348,220.454545836272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-83.0416593185317,34.8245604794717"
-              Start="0,0"
-              End="-83.0416593185317,27.3245604794717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-79.0416593185317,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-79.0416593185317,0"
-                    Point2="-83.0416593185317,0"
-                    Point3="-83.0416593185317,4" />
-                  <mssgle:LineSegment
-                    End="-83.0416593185317,27.3245604794717" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ArbitrosCartoes.Paths[OLE DB Source Output]"
-          TopLeft="294.249994952232,153.666666614905">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.1931776941162,45.4545458880338"
-              Start="0,0"
-              End="46.1931776941162,37.9545458880338">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.7272729440169"
-                    Point2="0,22.7272729440169"
-                    Point3="4,22.7272729440169" />
-                  <mssgle:LineSegment
-                    End="42.1931776941162,22.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.1931776941162,22.7272729440169"
-                    Point2="46.1931776941162,22.7272729440169"
-                    Point3="46.1931776941162,26.7272729440169" />
-                  <mssgle:LineSegment
-                    End="46.1931776941162,37.9545458880338" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\ArbitrosCartoes\FctFichasJogoTable">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\ArbitrosCartoes\Excel Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\JogadorGolAssCartPorPais">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="176,42"
-          Id="Package\JogadorGolAssCartPorPais\FctFichasJogoTable"
-          TopLeft="206.249994952232,111.666666614905" />
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\JogadorGolAssCartPorPais\Derived Column"
-          TopLeft="262.443172646348,199.121212502939" />
-        <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\JogadorGolAssCartPorPais\Excel Destination"
-          TopLeft="98.0681799944829,255.279106315744" />
-        <EdgeLayout
-          Id="Package\JogadorGolAssCartPorPais.Paths[Derived Column Output]"
-          TopLeft="262.443172646348,220.454545836272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-83.0416593185317,34.8245604794717"
-              Start="0,0"
-              End="-83.0416593185317,27.3245604794717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-79.0416593185317,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-79.0416593185317,0"
-                    Point2="-83.0416593185317,0"
-                    Point3="-83.0416593185317,4" />
-                  <mssgle:LineSegment
-                    End="-83.0416593185317,27.3245604794717" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\JogadorGolAssCartPorPais.Paths[OLE DB Source Output]"
-          TopLeft="294.249994952232,153.666666614905">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.1931776941162,45.4545458880338"
-              Start="0,0"
-              End="46.1931776941162,37.9545458880338">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.7272729440169"
-                    Point2="0,22.7272729440169"
-                    Point3="4,22.7272729440169" />
-                  <mssgle:LineSegment
-                    End="42.1931776941162,22.7272729440169" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.1931776941162,22.7272729440169"
-                    Point2="46.1931776941162,22.7272729440169"
-                    Point3="46.1931776941162,26.7272729440169" />
-                  <mssgle:LineSegment
-                    End="46.1931776941162,37.9545458880338" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\JogadorGolAssCartPorPais\FctFichasJogoTable">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\JogadorGolAssCartPorPais\Excel Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\MinutosAvalJog">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="176,42"
-          Id="Package\MinutosAvalJog\FctFichasJogoTable"
-          TopLeft="206.249994952232,111.666666614905" />
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\MinutosAvalJog\Derived Column"
-          TopLeft="376.999988764525,206.999993830919" />
-        <EdgeLayout
-          Id="Package\MinutosAvalJog.Paths[OLE DB Source Output]"
-          TopLeft="294.249994952232,153.666666614905">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="160.749993812293,53.3333272160144"
-              Start="0,0"
-              End="160.749993812293,45.8333272160144">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.6666636080072" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.6666636080072"
-                    Point2="0,26.6666636080072"
-                    Point3="4,26.6666636080072" />
-                  <mssgle:LineSegment
-                    End="156.749993812293,26.6666636080072" />
-                  <mssgle:CubicBezierSegment
-                    Point1="156.749993812293,26.6666636080072"
-                    Point2="160.749993812293,26.6666636080072"
-                    Point3="160.749993812293,30.6666636080072" />
-                  <mssgle:LineSegment
-                    End="160.749993812293,45.8333272160144" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="72.3749969061464,31.6666636080072,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\MinutosAvalJog\FctFichasJogoTable">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\TreinadoresGolos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="176,42"
-          Id="Package\TreinadoresGolos\FctFichasJogoTable"
-          TopLeft="206.249994952232,111.666666614905" />
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\TreinadoresGolos\Excel Destination"
+          TopLeft="98.0681799944829,255.279106315744" />
         <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\TreinadoresGolos\Derived Column"
           TopLeft="262.443172646348,199.121212502939" />
         <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\TreinadoresGolos\Excel Destination"
-          TopLeft="98.0681799944829,255.279106315744" />
-        <EdgeLayout
-          Id="Package\TreinadoresGolos.Paths[Derived Column Output]"
-          TopLeft="262.443172646348,220.454545836272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-83.0416593185317,34.8245604794717"
-              Start="0,0"
-              End="-83.0416593185317,27.3245604794717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-79.0416593185317,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-79.0416593185317,0"
-                    Point2="-83.0416593185317,0"
-                    Point3="-83.0416593185317,4" />
-                  <mssgle:LineSegment
-                    End="-83.0416593185317,27.3245604794717" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="176,42"
+          Id="Package\TreinadoresGolos\FctFichasJogoTable"
+          TopLeft="206.249994952232,111.666666614905" />
         <EdgeLayout
           Id="Package\TreinadoresGolos.Paths[OLE DB Source Output]"
           TopLeft="294.249994952232,153.666666614905">
@@ -5642,20 +5632,44 @@ ORDER BY
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TreinadoresGolos.Paths[Derived Column Output]"
+          TopLeft="262.443172646348,220.454545836272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.0416593185317,34.8245604794717"
+              Start="0,0"
+              End="-83.0416593185317,27.3245604794717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-79.0416593185317,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.0416593185317,0"
+                    Point2="-83.0416593185317,0"
+                    Point3="-83.0416593185317,4" />
+                  <mssgle:LineSegment
+                    End="-83.0416593185317,27.3245604794717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\TreinadoresGolos\FctFichasJogoTable">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\TreinadoresGolos\Excel Destination">
     <Properties>
@@ -5666,6 +5680,14 @@ ORDER BY
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\TreinadoresGolos\FctFichasJogoTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
